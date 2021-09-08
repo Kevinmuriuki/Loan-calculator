@@ -9,6 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <title>Loan Calculator</title>
+
+    <style>
+      #loading, #results {
+        display: none;
+      }
+    </style>
   </head>
   <body class="bg-dark">
     <div class="container">
@@ -38,10 +44,10 @@
             </form>
 
             <!-- Loader -->
-            <!-- <div id="loading">
+            <div id="loading">
               <img src="img/loading.gif" alt="">
-            </div> -->
-
+            </div>
+            
             <!-- Result -->
             <div id="results" class="pt-4">
               <h5>Results</h5>
