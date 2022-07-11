@@ -21,25 +21,41 @@
       <div class="row">
         <div class="col-md-6 mx-auto">
           <div class="card card-body text-center mt-5">
-            <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+            <h1 class="heading display-5 pb-3">Wealth Calculator</h1>
+
             <form id="loan-form">
               <div id="form-group" class="mb-3">
                 <div class="input-group">
-                  <span class="input-group-text">$</span>
-                  <input type="number" class="form-control" id="amount" placeholder="Loan Amout">
+                  <span class="input-group-text">Ksh</span>
+                  <input type="number" step="0.01" class="form-control" id="initial-value" placeholder="Initial Top-up" value="0"
+                  >
                 </div>
               </div>
+
+              <div id="form-group" class="mb-3">
+                <div class="input-group">
+                  <span class="input-group-text">Ksh</span>
+                  <input type="number" step="0.01" class="form-control" id="top-up" placeholder="Monthly Top-up" value="50000"
+                  >
+                </div>
+              </div>
+
               <div id="form-group" class="mb-3">
                 <div class="input-group">
                   <span class="input-group-text">%</span>
-                  <input type="number" class="form-control" id="interest" placeholder="interest">
+                  <input type="number" class="form-control" id="interest-rate" value="8.5" disabled>
                 </div>
               </div>
+
               <div id="form-group" class="mb-3">
-                <input type="number" class="form-control" id="years" placeholder="Years To Repay">
+                <div class="input-group">
+                  <span class="input-group-text">Months</span>
+                  <input type="number" class="form-control" id="months" placeholder="Duration" value="1">
+                </div>
               </div>
+
               <div class="form-group" class="mb-3">
-                <input type="submit" value="Calculate" class="btn btn-dark w-100">
+                <input type="submit" value="Calculate" class="btn btn-dark w-100" >
               </div>
             </form>
 
@@ -53,20 +69,28 @@
               <h5>Results</h5>
               <div id="form-group" class="mb-3">
                 <div class="input-group">
-                  <span class="input-group-text">Monthly Payment</span>
-                  <input type="number" class="form-control" id="monthly-payment" disabled>
+                  <span class="input-group-text">Ksh</span>
+                  <input type="number" class="form-control" id="invested-amount" placeholder="Invested Amount" disabled>
+                </div>
+              </div>
+
+              <div id="form-group" class="mb-3">
+                <div class="input-group">
+                  <span class="input-group-text">Interest</span>
+                  <input type="number" class="form-control" id="interest" disabled>
+                </div>
+              </div>
+
+              <div id="form-group" class="mb-3">
+                <div class="input-group">
+                  <span class="input-group-text">WHT</span>
+                  <input type="number" class="form-control" id="tax" disabled>
                 </div>
               </div>
               <div id="form-group" class="mb-3">
                 <div class="input-group">
-                  <span class="input-group-text">Total Payment</span>
-                  <input type="number" class="form-control" id="total-payment" disabled>
-                </div>
-              </div>
-              <div id="form-group" class="mb-3">
-                <div class="input-group">
-                  <span class="input-group-text">Total interest</span>
-                  <input type="number" class="form-control" id="total-interest" disabled>
+                  <span class="input-group-text">Total Value</span>
+                  <input type="number" class="form-control" id="total-investment" disabled>
                 </div>
               </div>
             </div>
@@ -81,10 +105,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+    <!-- Option 2: Separate Popper and Bootstrap JS --> -->
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    -->
+   
   </body>
 </html>
